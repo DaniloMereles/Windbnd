@@ -1,9 +1,13 @@
+//components
 import StayCard from './components/StayCard/StayCard';
-import './GlobalStyles.css'
+import Nav from './components/Nav/Nav'
 
 function App() {
   return(
-    <StayCard></StayCard>
+    <>
+      <Nav/>
+      <StayCard/>
+    </>
   )
 }
 

@@ -62,6 +62,7 @@ const StarIcon = styled(FontAwesomeIcon) `
 
 const ApartmentTitle = styled.h2 `
     color: #333333;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
