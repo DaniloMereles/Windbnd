@@ -1,4 +1,7 @@
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 
 const FormContainer = styled.form `
     width: 90%;
@@ -71,6 +74,94 @@ const LabelElement = styled.label `
     top: 12px;
 `
 
+const AddCitye = styled.div `
+    position: absolute;
+    top: 140px;
+    left: 100px;
+    width: 145px;
+    height: 200px;
+    display: ${props => props.ShowLocations === true ? 'flex' : 'none'};
+    justify-content: space-around;
+    flex-direction: column;
+
+    @media(max-width: 575px){
+        top: 280px;
+        width: 90%;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+    }
+`
+
+const CityeButton = styled.button `
+    background-color: transparent;
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    border: none;
+    outline: none;
+    color: #4F4F4F;
+    cursor: pointer;
+    &:hover{
+        color: #EB5757;
+    }
+`
+
+const MapIcon = styled(FontAwesomeIcon) `
+    margin-right: 10px;
+`
+ 
+const AddGuests = styled.div `
+    display: ${props => props.ShowAddGuests === true ? 'block' : 'none'};
+    width: 120px;
+    height: 200px;
+    position: absolute;
+    top: 140px;
+    left: 500px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400; 
+    font-size: 14px;
+    line-height: 17px;
+    @media(max-width: 575px){
+        position: absolute;
+        top: 200px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid black;
+    }
+`
+
+const AddGuestsForm = styled.div `
+    margin-bottom: 52px;
+`
+
+const AddGuestsTitle = styled.h3 `
+    font-weight: 700;
+`
+
+const AddGuestsParagraph = styled.p `
+    color: #828282;
+    margin-bottom: 12px;
+`
+
+const AddGuestsButton = styled.button `
+    width: 23px;
+    height: 23px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const AddGuestCount = styled.span `
+    margin: 10px;
+`
+
 const ButtonSearch = styled.button `
     width: 127px;
     height: 48px;
@@ -94,4 +185,7 @@ const ButtonSearch = styled.button `
     }
 `
 
-export {FormContainer, FormGroup, Separator, InputElement, LabelElement, InputContainer, ButtonSearch}
+
+export {FormContainer, FormGroup, Separator, InputElement, LabelElement, 
+    InputContainer, ButtonSearch, AddCitye, CityeButton, MapIcon, AddGuests, 
+    AddGuestsForm, AddGuestsTitle, AddGuestsParagraph, AddGuestsButton, AddGuestCount}

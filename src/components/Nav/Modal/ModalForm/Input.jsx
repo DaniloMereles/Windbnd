@@ -1,6 +1,6 @@
 import {InputElement, LabelElement, InputContainer} from './ModalFormStyles' 
 
-const Input = ({inputPlaceholder, inputId, labelText}) => {
+const Input = ({inputPlaceholder, inputId, labelText, inputOnFocus, inputValue, inputName}) => {
     return(
         <InputContainer>
             <LabelElement htmlFor={inputId}>
@@ -10,6 +10,9 @@ const Input = ({inputPlaceholder, inputId, labelText}) => {
             <InputElement 
                 placeholder = {inputPlaceholder}
                 id = {inputId}
+                onFocus = {inputOnFocus}
+                value = {inputValue}
+                name = {inputName}
             />
         </InputContainer>
     )
