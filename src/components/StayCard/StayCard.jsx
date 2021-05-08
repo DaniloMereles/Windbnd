@@ -4,21 +4,24 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 //styled components
 import {ApartmentType, Stay, StayBg, StayValuation, SuperHostButton, ApartmentStars, StarIcon, ApartmentTitle} from './StayCardStyles'
 
-const StayCard = () => {
+const StayCard = ({stayBg, superHost, stayType, stayBeds, stayRating, stayTitle}) => {
     return(
         <Stay>
-            <StayBg src="https://i.imgur.com/SFmpfEY.jpg"/>
+            <StayBg src={stayBg}/>
 
             <StayValuation>
-                <SuperHostButton>Super Host</SuperHostButton>
-                <ApartmentType>Entire apartment . 2 beds</ApartmentType>
+                {superHost === true ? <SuperHostButton>Super Host</SuperHostButton>: ''}
+
+                <ApartmentType>{stayType}. {stayBeds} beds</ApartmentType>
+
                 <ApartmentStars>
-                    <StarIcon icon={faStar}/>4.40
+                    <StarIcon icon={faStar}/>{stayRating}
                 </ApartmentStars>
+
             </StayValuation>
 
             <ApartmentTitle>
-                Stylist apartment in center of the city
+                {stayTitle}
             </ApartmentTitle>
         </Stay>
 

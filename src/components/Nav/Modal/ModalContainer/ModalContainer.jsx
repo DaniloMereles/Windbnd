@@ -23,7 +23,7 @@ const ModalContainer = ({ShowModal, setShowModal}) => {
                 </CloseModalButton>
             </ModalInfo>
 
-            <Form/>
+            <Form setShowModal = {setShowModal}/>
 
         </Modal>
 

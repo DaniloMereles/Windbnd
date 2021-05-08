@@ -6,6 +6,11 @@ const Stay = styled.article  `
     width: 395px;
     height: 410px;
     margin: 10px;
+
+    @media(max-width: 476px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 `
 
 const StayBg = styled.img `

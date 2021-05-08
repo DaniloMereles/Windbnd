@@ -123,13 +123,15 @@ const AddGuests = styled.div `
     font-size: 14px;
     line-height: 17px;
     @media(max-width: 575px){
+        width: 80%;
+        height: 300px;
         position: absolute;
         top: 200px;
         left: 0;
         right: 0;
         bottom: 0;
         margin: auto;
-        border: 1px solid black;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     }
 `
 

@@ -14,10 +14,13 @@ import { useContext, useEffect, useState } from 'react'
 import { ApartmentContext } from '../../../../Providers/ApartmentsProvider'
 
 
-const Form = () => {
+const Form = ({setShowModal}) => {
     //context
     const {ShowLocations, setShowLocation} = useContext(ApartmentContext)
     const  {ShowAddGuests, setShowAddGuests} = useContext(ApartmentContext)
+    const {Apartments} = useContext(ApartmentContext)
+
+    const {setFilterApartments} = useContext(ApartmentContext)
 
     //states
     const [Location, setLocation] = useState('')
@@ -33,8 +36,16 @@ const Form = () => {
     const handleOnSubmit = event => {
         event.preventDefault()
         const data = new FormData(event.target)
-        console.log(data.get('Location'))
-        console.log(data.get('Guests'))
+        let dataLocation = data.get('Location').toUpperCase()
+        let dataGuests = data.get('Guests')
+
+        console.log(dataLocation);
+        console.log(dataGuests);
+
+        //Apartments.map(apartment => console.log(apartment.country.toUpperCase() + " " + apartment.city.toUpperCase()))
+        let FilterStays = Apartments.filter(apartment => apartment.city.toUpperCase() + " " + apartment.country.toUpperCase() === dataLocation)
+        setFilterApartments(FilterStays)
+        setShowModal(false)
     }
 
     const handleShowCityes = () => {
@@ -90,22 +101,22 @@ const Form = () => {
                 <AddCitye ShowLocations = {ShowLocations}>
                     <CityeButton onClick={handleChangeLocation} type = "button">
                         <MapIcon icon = {faMapMarkerAlt}/>
-                        Helsinki, Finland
+                        Helsinki Finland
                     </CityeButton>
 
                     <CityeButton onClick={handleChangeLocation} type = "button">
                         <MapIcon icon = {faMapMarkerAlt}/>
-                        Turku, Finland
+                        Turku Finland
                     </CityeButton>
 
                     <CityeButton onClick={handleChangeLocation} type = "button">
                         <MapIcon icon = {faMapMarkerAlt}/>
-                        Oulu, Finland
+                        Oulu Finland
                     </CityeButton>
 
                     <CityeButton onClick={handleChangeLocation} type = "button">
                         <MapIcon icon = {faMapMarkerAlt}/>
-                        Vaasa, Finland
+                        Vaasa Finland
                     </CityeButton>
                 </AddCitye>
             </FormGroup>
