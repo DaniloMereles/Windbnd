@@ -2,6 +2,8 @@
 
 ### Live Demo: https://windbnd.netlify.app/
 
+<img src = "https://i.imgur.com/IJHkWBR.png"/>
+
 ## How to clone this proyect
 
 #### Clone this repository with this URL: https://github.com/DaniloMereles/Windbnd.git
