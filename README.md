@@ -1,10 +1,10 @@
-# How to clone the project
+# Windbnd 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Live Demo: https://windbnd.netlify.app/
 
-## Live Demo: https://windbnd.netlify.app/
+## How to clone this proyect
 
-### Clone this repository with this URL: https://github.com/DaniloMereles/Windbnd.git
+#### Clone this repository with this URL: https://github.com/DaniloMereles/Windbnd.git
 
 ### `npm i`
 This command install the project dependencies
