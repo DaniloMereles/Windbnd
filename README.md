@@ -10,8 +10,6 @@
 
 ### `npm i`
 This command install the project dependencies
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm start`
 This command will initialize the project on a development server
